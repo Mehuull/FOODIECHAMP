@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        /*=============== GOOGLE FONTS ===============*/
+        @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,800&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(images/menubackground.jpeg);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .img-container {
+            height: 550px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) {
+            .img-container {
+                height: auto;
+                width: 100%;
+            }
+
+            .img-container img {
+                height: auto;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .tabs {
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem;
+            display: flex;
+            background-color: #fff;
+            border-radius: 1000px;
+            box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+            list-style: none;
+            position: relative;
+            max-width: 100%;
+            width: 600px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .tab {
+            flex-grow: 1;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0.5rem;
+            cursor: pointer;
+            z-index: 2;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+
+        .tabs .slider {
+            width: calc(98% / 3);
+            height: 50px;
+            position: absolute;
+            border-radius: inherit;
+            background-color: #f23022;
+            z-index: 0;
+            transition: 0.3s ease;
+        }
+        input[type="radio"] {
+         display: none;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .tabs {
+                width: 100%;
+            }
+            .tab {
+                font-size: 1rem;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .tabs {
+                width: 100%;
+            }
+            .tab {
+                font-size: 0.659rem;
+                height: 35px;
+            }
+            .tabs .slider {
+                height: 35px;
+            }
+        }
+
+input[type="radio"]:checked + label {
+  color: white;
+}
+
+input[id="mainmenu"]:checked ~ .slider {
+  transform: translateX(0);
+}
+input[id="desert"]:checked ~ .slider {
+  transform: translateX(100%);
+}
+input[id="bevarages"]:checked ~ .slider {
+  transform: translateX(200%);
+}
+
+.menu-container {
+            display: grid;
+            gap: 20px; /* Gap between boxes */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            max-width: 1200px;
+            width: 100%;
+            padding: 1.5rem;
+           
+        }
+
+        .box {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .box {
+                height: 120px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .box {
+                height: 100px;
+                font-size: 1rem;
+            }
+        }
+
+        
+      
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="img-container">
+        <img src="images/covertemplate.jpg" alt="Menu Cover">
+    </div>
+    <div class="tabs">
+        <input type="radio" id="mainmenu" name="tabs" checked>
+        <label class="tab" for="mainmenu">Main menu</label>
+        <input type="radio" id="desert" name="tabs">
+        <label class="tab" for="desert">Desert</label>
+        <input type="radio" id="bevarages" name="tabs">
+        <label class="tab" for="bevarages">Bevarages</label>
+        <span class="slider"></span>
+      </div>
+
+
+      <div class="menu-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+</html>

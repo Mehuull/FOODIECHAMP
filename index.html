@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+          <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="style2.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>Foodiechamp </title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo"><i class="ri-restaurant-2-line"></i> FOODIE CHAMP</a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#menu" class="nav__link">Menu</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#aboutus" class="nav__link">About Us</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#gallery" class="nav__link">gallery</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#feedback" class="nav__link">Feedback</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <div class="nav__actions">
+               <!-- Search button -->
+               <i class="ri-search-line nav__search" id="search-btn"></i>
+
+               <!-- Login button -->
+               <i class="ri-user-line nav__login" id="login-btn"></i>
+
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== SEARCH ====================-->
+      <div class="search" id="search">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!--==================== LOGIN ====================-->
+      <div class="login" id="login">
+         <form action="" class="login__form">
+            <h1 class="login-logo"><i class="ri-restaurant-2-line"></i> FOODIE CHAMP</h1>
+            <h2 class="login__title">Log In</h2>
+            
+            <div class="login__group">
+               <div>
+                  <label for="email" class="login__label">Email</label>
+                  <input type="email" placeholder="Write your email" id="email" class="login__input">
+               </div>
+               
+               <div>
+                  <label for="password" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
+               </div>
+            </div>
+
+            <div>
+               <p class="login__signup">
+                  You do not have an account? <a href="#">Sign up</a>
+               </p>
+   
+               <a href="#" class="login__forgot">
+                  You forgot your password
+               </a>
+   
+               <button type="submit" class="login__button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+
+
+      <main>
+         <!-- Hero Section -->
+         <section id="home" class="hero-section">
+               
+            <div class="content-container">
+              <h2>Enjoy <span>Delicious Food</span>&#127828&#127829 In Your Heathy Life</h2>
+              <p>The food place is a neighborhood restaurant serving seasonal global cuisine driven by the farm.
+                Taste once our delicious food and you will come again....
+              </p>
+              <a href="#order" class="btn-order"> <i class="ri-shopping-cart-2-line"></i> Order Now</a>
+           </div>
+
+            <div class="hero-image">
+                <img src="images/pizzapng.png" class="Homepizzaimg" alt="Hero Dish">
+            </div>
+
+            <div class="corriander">
+                <img src="images/corrianderleaf.png" alt="">
+            </div>
+
+            <div class="chilie2">
+                <img src="images/redchilie2.png" alt="">
+            </div>
+
+            <div class="chilie">
+                <img src="images/redchilie.png" alt="">
+            </div>
+         </section>
+
+         <section class="cardsection" id="menu">
+           
+            <div class="card-container">
+               <div class="card">
+                 <img src="images/nonveg.png" alt="nonveg" class="card-icon">
+                 <h3 class="card-title">Tasty Nonveg</h3>
+                 <p class="card-text">"Explore a delightful variety of flavorful non-vegetarian dishes crafted to satisfy your cravings.</p>
+                 <button class="card-button">See Menu</button>
+               </div>
+               <div class="card">
+                 <img src="images/fastfood.png" alt="fast-food" class="card-icon">
+                 <h3 class="card-title">Fast Food</h3>
+                 <p class="card-text">"Indulge in quick, delicious, and satisfying fast-food favorites perfect for any occasion."</p>
+                 <button class="card-button">See Menu</button>
+               </div>
+               <div class="card">
+                 <img src="images/Barbeque.png" alt="Hot Barbecue" class="card-icon">
+                 <h3 class="card-title">Hot Barbecue</h3>
+                 <p class="card-text">"Savor the smoky, spicy, and mouthwatering taste of freshly grilled barbecue delights."</p>
+                 <button class="card-button">See Menu</button>
+               </div>
+            </div>
+         </section>
+
+
+
+         <section class="aboutus" id="aboutus">
+            
+            <div class="hero-image">
+               <img src="images/food dish.png" alt="Dish">
+           </div>
+
+            <div class="content-container2">
+               <h2>Why people Choose Us?</h2>
+               <div class="content2">
+                  <div class="subcontent">
+                     <img src="images/icon1 (1).png" alt="">
+                     <div class="sub-subcontent">
+                     <h3>Choose Your Favourites</h3>
+                     <p>The food place is a neighborhood restaurant serving seasonal global cuisine driven by the farm.
+                     Taste once our delicious food and you will come again....
+                     </p>
+                     </div>
+                  </div>
+
+                  <div class="subcontent">
+                     <img src="images/icon2.png" alt="">
+                     <div class="sub-subcontent">
+                     <h3>We Deliver Your Meal</h3>
+                     <p>The food place is a neighborhood restaurant serving seasonal global cuisine driven by the farm.
+                     Taste once our delicious food and you will come again....
+                     </p>
+                  </div>
+                  </div>
+
+                  <div class="subcontent">
+                     <img src="images/icon3.png" alt="">
+                     <div class="sub-subcontent">
+                        <h3>Grab your Delicious food</h3>
+                     <p>The food place is a neighborhood restaurant serving seasonal global cuisine driven by the farm.
+                     Taste once our delicious food and you will come again....
+                     </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+         <section class="menu">
+            <div class="menu-content">
+               <h2>Our Popular Food Items &#128293;&#128293;</h2>
+               <p>"Our popular items highlight the best of what we offer. From flavorful classics to signature dishes, these are the meals you don't want to miss!"</p>
+            </div>
+          
+            <!-- ===============menu cards =================== -->
+                        <!-- Swiper container -->
+                     <div class="swiper mySwiper container">
+                        <div class="swiper-wrapper content">
+                        
+                        <!-- Swiper slide item 1 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/magrettapizza.png" alt="Profile Image 1" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Pizza</h3>
+                              <p>
+                                 "Classic and timeless, our Margherita Pizza features a crispy crust topped with rich tomato sauce, fresh mozzarella, and fragrant basil."
+                              </p>
+                              <span>₹455</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 2 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/burger.png" alt="Profile Image 2" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Burger</h3>
+                              <p>
+                                 "Juicy, flavorful, and perfectly grilled, our burger is made with premium beef and served with all your favorite toppings on a soft, toasted bun."
+                              </p>
+                              <span>₹99</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 3 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/tacos.png" alt="Profile Image 3" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Tacos</h3>
+                              <p>
+                                 "Fresh, flavorful, and packed with bold toppings, our tacos are a fan favorite for a tasty, handheld bite."
+                              </p>
+                              <span>₹149</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 4 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/Noodles.png" alt="Profile Image 4" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Noodles</h3>
+                              <p>
+                                 "Deliciously savory, our noodles are tossed with fresh veggies and a rich, flavorful sauce for a satisfying meal."
+                              </p>
+                              <span>₹249</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 5 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/vegroll.png" alt="Profile Image 5" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Veg Roll</h3>
+                              <p>
+                                 "Packed with fresh veggies and wrapped in a soft, warm tortilla, our Veg Roll is a perfect bite of flavor and crunch."
+                              </p>
+                              <span>₹199</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 6 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/frenchfries.png" alt="Profile Image 6" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>French Fries</h3>
+                              <p>
+                                 "Crispy, golden, and perfectly seasoned, our French Fries are the ultimate snack or side dish."
+                              </p>
+                              <span>₹99</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        <!-- Swiper slide item 7 -->
+                        <div class="swiper-slide ">
+                           <div class="card-content">
+                              <!-- Profile image -->
+                              <div class="image">
+                              <img src="images/friedchicken.png" alt="Profile Image 7" />
+                              </div>
+                              <!-- Details -->
+                              <div class="info">
+                              <h3>Fried Chicken</h3>
+                              <p>
+                                 "Golden, crispy, and packed with flavor, our fried chicken is perfectly seasoned and fried to perfection."
+                              </p>
+                              <span>₹399</span>
+                              </div>
+                              <!-- Rating -->
+                              <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="button">
+                              <button class="aboutMe">Shop Now</button>
+                              </div>
+                           </div>
+                        </div>
+                     
+                        </div>
+                     </div>
+                     
+                     <!-- Swiper navigation buttons -->
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-pagination"></div>
+         </section>
+
+         <section class="reservation" id="gallery">
+            <div class="rv-container">
+               <div class="rv-wrapper">
+                  <div class="rv-slider">
+                     <img src="images/restaurant-hall-with-lots-table.jpg" alt="">
+                     <img src="images/banquet.jpg" alt="">
+                     <img src="images/restaurant.jpg" alt="">
+                  </div>
+               </div>
+
+               
+            </div>
+
+            <div class="spice"><img src="images/spice1.png" alt=""></div>
+            <div class="spice2"><img src="images/spice2.png" alt=""></div>
+
+            <div class="reservationform">
+               <h3>Welcome to FoodieChamp restaurant</h3>
+               <h2>make a Reservation</h2>
+               <p>Please note we do not take reservations on Saturday, Sunday and festive days.
+                  Thank you for choosing FOODIE CHAMP!</p>
+               <h1>+91 9*2*2 88*000</h1>
+               <span>book a table</span>
+               <form id="reservation-form" method="post" name="resfrm" style="display: inline-block;">
+                  <div class="reservation-page-input-box">
+                    <label>Your name</label>
+                    <input type="text" class="form-control" placeholder="Full name" name="res_custname" id="res_custname" maxlength="240">
+                  </div>
+                  <div class="reservation-page-input-box">
+                    <label>Date &amp; Time</label>
+                    <span class="fa fa-calendar date_picker" aria-hidden="true">
+                    <input type="date" placeholder="Select Date" name="res_bookdate" id="res_bookdate" maxlength="240">
+                    </span> <span class="fa fa-clock-o time_picker" aria-hidden="true">
+                    <input type="time" placeholder="Select Time" name="res_booktime" id="res_booktime" maxlength="240">
+                    </span> </div>
+                  <div class="reservation-page-input-box">
+                    <label>Phone number</label>
+                    <input type="tel" class="form-control" placeholder="Your phone" name="res_phone" id="res_phone" maxlength="10">
+                  </div>
+                  <div class="reservation-page-input-box">
+                    <label>Seats</label>
+                    <input type="text" class="form-control rt-date" placeholder="Total Person" name="res_person" id="res_person" maxlength="240">
+                  </div>
+                  <div class="reservation-page-textarea">
+                    <table width="100%">
+                      <tbody><tr>
+                        <td><img src="images/captcha.jpeg"></td>
+                        <td width="20"></td>
+                        <td><input type="text" id="res_captcha" name="res_captcha" placeholder="Captcha Code"></td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  <div class="reservation-booking text-center" style="clear:both;">
+                    <button type="button" class="book-now-btn" name="resvbtn" id="resvbtn" onclick="javascript:return chkreserv_book()" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Wait..">Booking now</button>
+                  </div>
+                </form>
+            </div>
+         </section>
+
+         <!-- feedback section -->
+         <h3>Customers Feedback </h3>
+         <section class="feedback" id="feedback">
+            <div class="feedback-container">
+              <div class="fb-slide">
+                <div class="client__card">
+                  <img src="images/client1.jpeg" alt="client" />
+                  <h4>priyansh Bakshi</h4>
+                  <h5>Guest</h5>
+                  <p>
+                     "This place is a hidden gem! The fast food was quick, but the flavors were anything but ordinary. Their barbecue ribs were cooked to perfection, and the Indian dishes were bursting with authentic spices. A must-visit for anyone craving a delicious and diverse meal!"
+                  </p>
+                  <div class="rating">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                     <i class="far fa-star"></i>
+                     </div>
+                </div>
+              </div>
+        
+              <div class="fb-slide">
+                <div class="client__card">
+                  <img src="images/client2.jpeg" alt="client" />
+                  <h4>Riya Dawal</h4>
+                  <h5>Guest</h5>
+                  <p>
+                     "If you love great barbecue and Indian food, you’ve got to try this place! The tandoori chicken was out of this world, and the grilled meats were full of flavor. It’s fast food done right with a unique twist!"
+                  </p>
+                  <div class="rating">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                     <i class="far fa-star"></i>
+                     </div>
+                </div>
+              </div>
+        
+              <div class="fb-slide">
+                <div class="client__card">
+                  <img src="images/client3.jpeg" alt="client" />
+                  <h4>Mohit Mehta</h4>
+                  <h5>Guest</h5>
+                  <p>
+                     "You don’t have to break the bank to enjoy great food here. Their non-veg options, especially the grilled chicken and barbeque platter, are a steal. Plus, the Indian food is so flavorful, you’ll forget you're eating fast food!"
+                  </p>
+                  <div class="rating">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="far fa-star"></i>
+                     <i class="far fa-star"></i>
+                     </div>
+                </div>
+              </div>
+        
+              <div class="fb-pagination"></div>
+            </div>
+            
+            <div class="chefimg">
+               <div class="chefimgbg"></div>
+              <img src="images/chef1.png" alt="Chef Image">
+            </div>
+          </section>
+        
+
+
+
+
+          <section class="subscribe">
+            <div class="subscribe-container">
+                <div class="sub-con-img">
+                    <img src="images/cheflogo.png" alt="">
+                </div>
+                <div>
+                    <h1>Subscribe to your newsletter</h1>
+                    <p>Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many
+                        web sites
+                        still in their infancy.</p>
+                    <div class="input-wrap">
+                        <input type="email" placeholder="email@freshmeal.com">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+
+       <!-- footer section     -->
+    <footer class="footer">
+      <div class="box-container">
+          <div class="box">
+              <h3>quick links</h3>
+              <a href="#"> <i class="fas 
+              fa-arrow-right"></i> Home</a>
+              <a href="#"> <i class="fas
+              fa-arrow-right"></i>Shop</a>
+              <a href="#"> <i class="fas
+              fa-arrow-right"></i>About</a>
+              <a href="#"> <i class="fas
+              fa-arrow-right"></i> Review</a>
+              <a href="#"> <i class="fas 
+              fa-arrow-right"></i>Blog</a>
+              <a href="#"> <i class="fas
+              fa-arrow-right"></i>Contact</a>
+          </div>
+
+          <div class="box">
+              <h3>follow us</h3>
+              <a href="#"> <i class="fab 
+              fa-facebook-f"></i> facebook </a>
+              <a href="#"> <i class="fab
+              fa-twitter"></i> twitter </a>
+              <a href="#"> <i class="fab 
+              fa-instagram"></i> instagram </a>
+              <a href="#"> <i class="fab
+              fa-linkedin"></i> linkedin </a>
+              <a href="#"> <i class="fab 
+              fa-pinterest"></i> pinterest </a>
+          </div>
+
+          <div class="box">
+              <h3>Location</h3>
+              <p>for any inquiry: +91 3025414521</p>
+              <p><iframe id="googlelocation"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1734.6282206554731!2d72.82400682154885!3d21.194419457391152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e60d49aaf5f%3A0x3da4afc3e0fa1ed3!2sSurat%20Khaman%20House!5e0!3m2!1sen!2sin!4v1732877060348!5m2!1sen!2sin" width="420" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+          </div>
+      </div>
+
+      
+  <div class="credit">created with 🧡 BY <a href="https://github.com/Mehuull"><i class="fa-brands fa-github"></i>&nbsp;Mehuull</a></div>
+   </footer>
+
+
+      
+      <!--=============== MAIN JS ===============-->
+      <script src="script.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+      <script src="script2.js"></script>
+      <script src="script3.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </body>
+</html>

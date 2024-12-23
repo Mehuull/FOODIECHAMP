@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card with Sliding Feature</title>
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+section {
+  position: relative;
+  height: 450px;
+  padding: 15px;
+  padding: 0 70px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: 35rem;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: #7d2ae8;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+.card .card-content .info {
+text-align: center;
+padding: 1rem;
+width: 20rem;
+background-color: antiquewhite;
+}
+
+section .card .image {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #7d2ae8;
+}
+
+section .card .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card .media-icons {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .media-icons i {
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card .media-icons i:hover {
+  opacity: 1;
+}
+
+.card .name-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: ;
+}
+
+.name-profession .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.card .rating i {
+  font-size: 18px;
+  margin: 0 2px;
+  color: #7d2ae8;
+}
+
+.card .button {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card .button button {
+  background: #7d2ae8;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background: #6616d0;
+}
+
+.swiper-pagination {
+  position: absolute;
+}
+
+.swiper-pagination-bullet {
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #7d2ae8;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.7;
+  color: #7d2ae8;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  color: #7d2ae8;
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- Swiper container -->
+      <div class="swiper mySwiper container">
+        <div class="swiper-wrapper content">
+          
+          <!-- Swiper slide item 1 -->
+          <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/magrettapizza.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>pizza</h3>
+                <p>"Classic and timeless, our Margherita Pizza features a crispy crust topped with rich tomato sauce, fresh mozzarella, and fragrant basil."</p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- Swiper slide item 2 -->
+           <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/burger.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>burger</h3>
+                <p>"Juicy, flavorful, and perfectly grilled, our burger is made with premium beef and served with all your favorite toppings on a soft, toasted bun." </p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+
+           <!-- Swiper slide item 3 -->
+           <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/tacos.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>Tacos</h3>
+                <p>"Fresh, flavorful, and packed with bold toppings, our tacos are a fan favorite for a tasty, handheld bite." </p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+
+           <!-- Swiper slide item 2 -->
+           <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/Noodles.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>Noodles</h3>
+                <p>"Deliciously savory, our noodles are tossed with fresh veggies and a rich, flavorful sauce for a satisfying meal." </p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+
+           <!-- Swiper slide item 4 -->
+           <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/vegroll.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>Veg roll</h3>
+                <p>"Packed with fresh veggies and wrapped in a soft, warm tortilla, our Veg Roll is a perfect bite of flavor and crunch."</p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- Swiper slide item 4 -->
+           <div class="swiper-slide card">
+            <div class="card-content">
+              <!-- Profile image -->
+              <div class="image">
+                <img src="images/frenchfries.png" alt="Profile Image 1" />
+              </div>
+              <!-- details -->
+              <div class="info">
+                <h3>French Fries</h3>
+                <p>"Crispy, golden, and perfectly seasoned, our French Fries are the ultimate snack or side dish."</p>
+                <span>₹20</span>
+              </div>
+    
+              <!-- Rating -->
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+    
+              <!-- Buttons -->
+              <div class="button">
+                <button class="aboutMe">shop now</button>
+              </div>
+            </div>
+          </div>
+
+
+                <!-- Swiper slide item 6 -->
+                <div class="swiper-slide card">
+                  <div class="card-content">
+                    <!-- Profile image -->
+                    <div class="image">
+                      <img src="images/friedchicken.png" alt="Profile Image 1" />
+                    </div>
+                    <!-- details -->
+                    <div class="info">
+                      <h3>Fried chicken</h3>
+                      <p>"Golden, crispy, and packed with flavor, our fried chicken is perfectly seasoned and fried to perfection."</p>
+                      <span>₹20</span>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button">
+                      <button class="aboutMe">shop now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    
+      <!-- Swiper navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+
+
+    
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        grabCursor: true,
+        loop: true,
+
+        // Pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Next and previous navigation
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // Responsive breakpoints
+        breakpoints: {
+          0: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

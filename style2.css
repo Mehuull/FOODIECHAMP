@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@100..400&display=swap");
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+h3 {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.feedback-container {
+  width: 40%;
+  height: 460px;
+  background-color: #fff;
+  margin-left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 44px;
+  overflow: hidden;
+  box-shadow: -1px 1px 100px 8px rgba(47, 128, 228, 0.14),
+    36px 24px 90px 7px rgba(89, 34, 203, 0.18);
+}
+.fb-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.fb-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.fb-pagination .fb-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ed9e85;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.fb-pagination .fb-dot.active {
+  background-color: #f23022;
+}
+.feedback {
+  height: 90vh;
+  width: 100%;
+  margin: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f5f1;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.chefimg {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.chefimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  z-index: 100;
+}
+.chefimgbg {
+  height: 600px;
+  width: 35%;
+  background-color: gold;
+  position: absolute;
+  clip-path: polygon(0 59%, 100% 0, 100% 100%, 0% 100%);
+}
+@media screen and (max-width: 768px) {
+  .feedback {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .feedback-container {
+    width: 85%;
+    height: 425px;
+    margin: 1rem;
+  }
+  .chefimg {
+    width: 85%;
+    height: 500px;
+  }
+  .chefimgbg {
+    width: 70%;
+    height: 400px;
+  }
+}
+
+.client__card {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.client__card p {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  line-height: 1.75rem;
+}
+
+.client__card img {
+  margin-top: 1rem;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  border: solid black 3px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.client__card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  margin: 1rem;
+  font-family: "poppins", "sans-serif";
+}
+
+.client__card h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "poppins", "sans-serif";
+  margin-bottom: 10px;
+  margin: 0;
+}
+@media acreen and (max-width: 768px) {
+  .client__card h4 {
+    font-size: 1.2rem;
+  }
+  .client__card h5 {
+    font-size: 0.9rem;
+  }
+  .client__card p {
+    font-size: 0.8rem;
+  }
+}
+.client__card .rating i {
+  color: gold;
+  margin-top: 1rem;
+}
+
+.reservation {
+  height: 200vh;
+  width: 100%;
+  margin: 0;
+  background-color: #f9f5f1;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;  
+}
+.rv-container {
+  height: auto;
+}
+.rv-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.rv-slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.rv-slider::-webkit-scrollbar {
+  display: none;
+}
+.rv-slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.spice {
+  display: flex;
+  position: absolute;
+  height: 430px;
+  width: 15rem;
+  background-color: transparent;
+  z-index: 100;
+  top: 1.5rem;
+  left: 0px;
+}
+.spice2 {
+  display: flex;
+  position: absolute;
+  height: 430px;
+  width: 15rem;
+  background-color: transparent;
+  z-index: 100;
+  top: 1.5rem;
+  right: 0px;
+}
+.spice2 img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1210px) {
+  .spice {
+    display: none;
+  }
+  .spice2 {
+    display: none;
+  }
+}
+.reservationform {
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  border: solid gold 3px;
+  margin-top: 1rem;
+  padding-inline: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.reservationform h3 {
+  font-size: 1rem;
+  text-decoration: none;
+  color: hsl(230, 12%, 40%);
+  font-family: "poppins", "sans-serif";
+  margin-bottom: 1rem;
+}
+.reservationform h2 {
+  font-size: 2.5rem;
+  color: black;
+  font-family: "Playwrite CO";
+  text-decoration-line: underline;
+  text-decoration-color: gold;
+}
+.reservationform p {
+  font-family: "poppins";
+  margin-bottom: 0.8rem;
+}
+.reservationform h1 {
+  font-size: 2rem;
+  font-family: "poppins";
+  color: #f23022;
+}
+.reservationform span {
+  margin-top: 1rem;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .reservation {
+    height: auto;
+  }
+  .reservationform h3 {
+    font-size: 0.7rem;
+  }
+  .reservationform h2 {
+    font-size: 1.4rem;
+  }
+  .reservationform p {
+    font-size: 12px;
+  }
+  .reservationform h1 {
+    font-size: 1.2rem;
+  }
+  .reservationform span {
+    font-size: 18px;
+  }
+}
+
+#reservation-form {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: "poppins", sans-serif;
+}
+
+.reservation-page-input-box {
+  display: inline-block;
+  width: calc(50% - 1rem);
+  margin-bottom: 1rem;
+  vertical-align: top;
+}
+
+.reservation-page-input-box:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.reservation-page-input-box label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.reservation-page-input-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.reservation-page-input-box input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.date_picker,
+.time_picker {
+  display: flex;
+  align-items: center;
+}
+
+.date_picker input,
+.time_picker input {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.fa-calendar,
+.fa-clock-o {
+  color: #007bff;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.reservation-page-textarea {
+  margin-bottom: 1.5rem;
+}
+
+.reservation-page-textarea table {
+  width: 100%;
+}
+
+.reservation-page-textarea img {
+  display: inline-block;
+  max-width: 100px;
+  vertical-align: middle;
+}
+
+.reservation-page-textarea input {
+  width: calc(100% - 120px);
+  margin-left: 20px;
+  vertical-align: middle;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reservation-booking {
+  text-align: center;
+}
+
+.book-now-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #e64a19;
+}
+
+.book-now-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .reservation-page-input-box {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .reservation-page-textarea input {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .reservation-page-textarea table {
+    display: block;
+  }
+}
+
+.subscribe {
+  background: #4f45e2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  height: 350px;
+}
+
+.subscribe-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sub-con-img {
+  flex: 0 0 200px;
+  max-width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-con-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.subscribe-container div {
+  flex: 1;
+}
+
+.subscribe h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subscribe p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.subscribe .input-wrap {
+  display: flex;
+  padding: 0.4rem;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.subscribe .input-wrap input {
+  flex: 1;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.subscribe .input-wrap button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: linear-gradient(to right, #ff1178, #f89928);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.subscribe .input-wrap button:hover {
+  background: linear-gradient(to right, #f89928, #ff1178);
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .sub-con-img {
+    display: none;
+  }
+
+  .subscribe-container div {
+    text-align: center;
+  }
+
+  .subscribe h1 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe p {
+    font-size: 0.9rem;
+  }
+
+  .subscribe .input-wrap {
+    flex-direction: column;
+  }
+
+  .subscribe .input-wrap input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .subscribe .input-wrap button {
+    width: 100%;
+  }
+}
